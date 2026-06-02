@@ -21,7 +21,7 @@ html { font-size: 16px; }
 
 /* ===== MESA DE MADERA OSCURA (FONDO) ===== */
 body {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Karla', sans-serif;
     line-height: 1.5;
     color: var(--paper);
     padding: 34px 18px;
@@ -59,9 +59,9 @@ body {
     color: var(--gold-bright);
     border: 1px solid var(--gold);
     padding: 13px 32px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
@@ -130,9 +130,9 @@ body {
 .logo.logo-ok { display: block; }
 
 .text-logo h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    font-weight: 900;
+    font-family: 'Abril Fatface', 'Playfair Display', serif;
+    font-size: 3.4rem;
+    font-weight: 400;
     color: var(--paper);
     letter-spacing: 3px;
     line-height: 1;
@@ -140,8 +140,8 @@ body {
 }
 
 .estd {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.62rem;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 0.72rem;
     letter-spacing: 5px;
     color: var(--gold-bright);
     text-transform: uppercase;
@@ -152,9 +152,9 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 5mm;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display SC', serif;
     font-weight: 400;
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     letter-spacing: 6px;
     color: var(--paper);
     margin-top: 3mm;
@@ -194,10 +194,10 @@ body {
 .group-banner {
     column-span: all;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 1.45rem;
-    letter-spacing: 10px;
+    font-family: 'Playfair Display SC', 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.55rem;
+    letter-spacing: 8px;
     text-indent: 10px;
     text-transform: uppercase;
     color: var(--gold-bright);
@@ -223,9 +223,9 @@ body {
 /* Título de categoría */
 .section-title {
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 0.92rem;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-size: 1rem;
     color: var(--gold-bright);
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -254,11 +254,11 @@ body {
     margin-bottom: 3.2mm;
 }
 .item-name {
-    font-family: 'Crimson Text', serif;
-    font-size: 0.98rem;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--paper);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.6px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -270,9 +270,9 @@ body {
     min-width: 12px;
 }
 .item-price {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 0.82rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 0.86rem;
     color: var(--gold-bright);
     white-space: nowrap;
 }
@@ -280,8 +280,8 @@ body {
 /* ===== PIE ===== */
 .footer { text-align: center; margin-top: 6mm; }
 .footer p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.64rem;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.66rem;
     letter-spacing: 2px;
     color: var(--paper-dim);
     text-transform: uppercase;
