@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Entradas",
+        "platos": [
+            { "nombre": "Tabla de quesos y embutidos", "precio": 12.50 },
+            { "nombre": "Tabla de carne", "precio": 15.00 },
+            { "nombre": "Croquetas de jamón", "precio": 8.50 },
+            { "nombre": "Tabla mixta", "precio": 18.00 }
+        ]
+    },
+    {
+        "nombre": "Carnes",
+        "platos": [
+            { "nombre": "Carne a la parrilla (200g)", "precio": 18.50 },
+            { "nombre": "Bife de chorizo (300g)", "precio": 22.00 },
+            { "nombre": "Costillar BBQ", "precio": 25.00 },
+            { "nombre": "Punta de anca (250g)", "precio": 16.50 },
+            { "nombre": "Entraña a la parrilla", "precio": 20.00 }
+        ]
+    },
+    {
+        "nombre": "Pescados y Mariscos",
+        "platos": [
+            { "nombre": "Salmón a la mantequilla", "precio": 19.50 },
+            { "nombre": "Trucha rellena de champiñones", "precio": 17.00 },
+            { "nombre": "Camarones al ajillo", "precio": 16.50 },
+            { "nombre": "Tabla de mariscos", "precio": 28.00 }
+        ]
+    },
+    {
+        "nombre": "Acompañamientos",
+        "platos": [
+            { "nombre": "Papas a la francesa", "precio": 4.50 },
+            { "nombre": "Ensalada mixta", "precio": 5.00 },
+            { "nombre": "Champiñones salteados", "precio": 6.00 },
+            { "nombre": "Espárragos a la mantequilla", "precio": 7.00 }
+        ]
+    },
+    {
+        "nombre": "Bebidas",
+        "platos": [
+            { "nombre": "Agua mineral (500ml)", "precio": 2.00 },
+            { "nombre": "Gaseosa (500ml)", "precio": 3.00 },
+            { "nombre": "Cerveza (350ml)", "precio": 4.50 },
+            { "nombre": "Vino tinto (copa)", "precio": 6.00 },
+            { "nombre": "Vino blanco (copa)", "precio": 6.00 }
+        ]
+    },
+    {
+        "nombre": "Postres",
+        "platos": [
+            { "nombre": "Tiramisú", "precio": 7.50 },
+            { "nombre": "Flan casero", "precio": 6.50 },
+            { "nombre": "Helado (3 sabores)", "precio": 5.50 },
+            { "nombre": "Fruta de estación", "precio": 4.00 }
+        ]
+    }
+]
