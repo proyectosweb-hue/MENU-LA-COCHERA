@@ -1,58 +1,175 @@
 [
     {
-        "nombre": "Entradas",
+        "nombre": "Pa Picar",
         "platos": [
-            { "nombre": "Tabla de quesos y embutidos", "precio": 12.50 },
-            { "nombre": "Tabla de carne", "precio": 15.00 },
-            { "nombre": "Croquetas de jamón", "precio": 8.50 },
-            { "nombre": "Tabla mixta", "precio": 18.00 }
+            { "nombre": "Maduro Boom", "precio": 500 },
+            { "nombre": "Focaccia Artesanal", "precio": 270 },
+            { "nombre": "Quipe de Chivo (2 und)", "precio": 250 },
+            { "nombre": "Tacos de Chicharrón", "precio": 450 },
+            { "nombre": "Tacos de Pollo", "precio": 420 }
         ]
     },
     {
-        "nombre": "Carnes",
+        "nombre": "To Share",
         "platos": [
-            { "nombre": "Carne a la parrilla (200g)", "precio": 18.50 },
-            { "nombre": "Bife de chorizo (300g)", "precio": 22.00 },
-            { "nombre": "Costillar BBQ", "precio": 25.00 },
-            { "nombre": "Punta de anca (250g)", "precio": 16.50 },
-            { "nombre": "Entraña a la parrilla", "precio": 20.00 }
+            { "nombre": "Trío de Mofongo Cerdo BBQ", "precio": 480 },
+            { "nombre": "Trío de Mofongo Mariscos a la Criolla", "precio": 530 },
+            { "nombre": "Trío de Mofongo Pollo a la Crema", "precio": 480 },
+            { "nombre": "Pork Crunch Bowl", "precio": 400 },
+            { "nombre": "Pop Corn Chicken Fries", "precio": 550 },
+            { "nombre": "Chilli Cheese Fries", "precio": 650 },
+            { "nombre": "Dominican Fries", "precio": 500 },
+            { "nombre": "Coche de Nacho", "precio": 600 },
+            { "nombre": "Alitas BBQ Original", "precio": 540 },
+            { "nombre": "Alitas BBQ Guayaba", "precio": 540 },
+            { "nombre": "Alitas Lemon and Pepper", "precio": 540 },
+            { "nombre": "Alitas Búfalo", "precio": 540 }
+        ]
+    },
+    {
+        "nombre": "Entradas",
+        "platos": [
+            { "nombre": "Salmón Tartar", "precio": 795 },
+            { "nombre": "Ceviche Clásico", "precio": 825 },
+            { "nombre": "Croquetas de Pollo", "precio": 495 },
+            { "nombre": "Mozzarella Stick", "precio": 450 },
+            { "nombre": "Dumpling de Cerdo", "precio": 500 }
+        ]
+    },
+    {
+        "nombre": "Lo Nuestro",
+        "platos": [
+            { "nombre": "Chivo Braseado Cochera", "precio": 900 },
+            { "nombre": "Longaniza de Cerdo Artesanal", "precio": 570 },
+            { "nombre": "Carne Salada Artesanal", "precio": 570 },
+            { "nombre": "Pechuga Rellena", "precio": 770 },
+            { "nombre": "Mofongo de Camarones", "precio": 950 },
+            { "nombre": "Mofongo de Chicharrón", "precio": 700 },
+            { "nombre": "Mofongo Longaniza", "precio": 600 },
+            { "nombre": "Mofongo Carne Salada", "precio": 600 },
+            { "nombre": "Mofongo Taki Taki", "precio": 850 }
+        ]
+    },
+    {
+        "nombre": "Grilled Meat",
+        "platos": [
+            { "nombre": "Parrillada Mar y Tierra", "precio": 2950 },
+            { "nombre": "Churrasco Angus 10 oz", "precio": 1500 },
+            { "nombre": "Filete de Res Angus 10 oz", "precio": 955 },
+            { "nombre": "Filete de Cerdo", "precio": 580 },
+            { "nombre": "Pechuga de Pollo al Grill", "precio": 650 },
+            { "nombre": "Baby Back Ribs St. Louis", "precio": 1200 }
+        ]
+    },
+    {
+        "nombre": "Comfort Food",
+        "platos": [
+            { "nombre": "American Cheese Burger", "precio": 475 },
+            { "nombre": "Sweet Cochera Burger", "precio": 530 },
+            { "nombre": "Honguito Burger", "precio": 590 },
+            { "nombre": "Cochera Club", "precio": 520 },
+            { "nombre": "York Chees", "precio": 470 },
+            { "nombre": "Burrito", "precio": 500 },
+            { "nombre": "Quesadilla", "precio": 490 }
+        ]
+    },
+    {
+        "nombre": "Pizzas",
+        "platos": [
+            { "nombre": "Special House Carnívora", "precio": 900 },
+            { "nombre": "Churrasco y Cebolla", "precio": 900 },
+            { "nombre": "César Pollo", "precio": 720 },
+            { "nombre": "Pizza Pepperoni", "precio": 630 },
+            { "nombre": "Pizza Margarita", "precio": 630 },
+            { "nombre": "Pizza Maíz", "precio": 630 },
+            { "nombre": "Pizza Jamón", "precio": 630 }
+        ]
+    },
+    {
+        "nombre": "Arroces y Pastas",
+        "platos": [
+            { "nombre": "Pasta Artesanal", "precio": 900 },
+            { "nombre": "Aurora Vodka Camarones", "precio": 950 },
+            { "nombre": "Aurora Vodka Pollo", "precio": 850 },
+            { "nombre": "Risotto de Churrasco", "precio": 1090 },
+            { "nombre": "Risotto de Chivo", "precio": 950 }
         ]
     },
     {
         "nombre": "Pescados y Mariscos",
         "platos": [
-            { "nombre": "Salmón a la mantequilla", "precio": 19.50 },
-            { "nombre": "Trucha rellena de champiñones", "precio": 17.00 },
-            { "nombre": "Camarones al ajillo", "precio": 16.50 },
-            { "nombre": "Tabla de mariscos", "precio": 28.00 }
+            { "nombre": "Pesca del Día", "precio": 810 },
+            { "nombre": "Salmón Cochera", "precio": 900 },
+            { "nombre": "Camarones al Ajillo", "precio": 985 },
+            { "nombre": "Camarones a la Criolla", "precio": 985 },
+            { "nombre": "Camarones Crispy", "precio": 995 },
+            { "nombre": "Calamares a la Romana", "precio": 800 }
         ]
     },
     {
-        "nombre": "Acompañamientos",
+        "nombre": "Green Salad",
         "platos": [
-            { "nombre": "Papas a la francesa", "precio": 4.50 },
-            { "nombre": "Ensalada mixta", "precio": 5.00 },
-            { "nombre": "Champiñones salteados", "precio": 6.00 },
-            { "nombre": "Espárragos a la mantequilla", "precio": 7.00 }
+            { "nombre": "Ensalada César Pollo", "precio": 550 },
+            { "nombre": "Capressa Dominicana", "precio": 470 },
+            { "nombre": "Mix de Ensalada", "precio": 400 }
         ]
     },
     {
-        "nombre": "Bebidas",
+        "nombre": "Caldos para el Alma",
         "platos": [
-            { "nombre": "Agua mineral (500ml)", "precio": 2.00 },
-            { "nombre": "Gaseosa (500ml)", "precio": 3.00 },
-            { "nombre": "Cerveza (350ml)", "precio": 4.50 },
-            { "nombre": "Vino tinto (copa)", "precio": 6.00 },
-            { "nombre": "Vino blanco (copa)", "precio": 6.00 }
+            { "nombre": "Sancocho Típico", "precio": 590 },
+            { "nombre": "Sopa de Pescado", "precio": 500 }
+        ]
+    },
+    {
+        "nombre": "Best Seller",
+        "platos": [
+            { "nombre": "Bandeja Aplatanada", "precio": 850 },
+            { "nombre": "Tabla Parrillera x 2", "precio": 1200 },
+            { "nombre": "Tabla Parrillera x 4", "precio": 2200 },
+            { "nombre": "Tabla Parrillera x 6", "precio": 2750 },
+            { "nombre": "Pechuga al Maduro", "precio": 800 },
+            { "nombre": "Chicharrón Crujiente", "precio": 700 },
+            { "nombre": "Arroz Frito Estilo Cochera Pollo", "precio": 575 },
+            { "nombre": "Arroz Frito Estilo Cochera Camarones", "precio": 700 },
+            { "nombre": "Arroz Frito Estilo Cochera Chicharrón", "precio": 600 },
+            { "nombre": "Arroz Frito Estilo Cochera Res", "precio": 590 },
+            { "nombre": "Arroz Frito Estilo Cochera Cerdo", "precio": 590 }
         ]
     },
     {
         "nombre": "Postres",
         "platos": [
-            { "nombre": "Tiramisú", "precio": 7.50 },
-            { "nombre": "Flan casero", "precio": 6.50 },
-            { "nombre": "Helado (3 sabores)", "precio": 5.50 },
-            { "nombre": "Fruta de estación", "precio": 4.00 }
+            { "nombre": "Brownie a la Moda", "precio": 375 },
+            { "nombre": "Cheesecake Fresa", "precio": 500 },
+            { "nombre": "Cheesecake Chinola", "precio": 500 },
+            { "nombre": "Flan de Leche", "precio": 300 }
+        ]
+    },
+    {
+        "nombre": "Guarniciones",
+        "platos": [
+            { "nombre": "Papas Fritas", "precio": 135 },
+            { "nombre": "Tostones", "precio": 150 },
+            { "nombre": "Arroz Blanco", "precio": 140 },
+            { "nombre": "Puré de Papas", "precio": 150 },
+            { "nombre": "Papas Baby al Romero", "precio": 100 },
+            { "nombre": "Vegetales al Grill", "precio": 200 },
+            { "nombre": "Ensalada Verde", "precio": 150 }
+        ]
+    },
+    {
+        "nombre": "Adicionales",
+        "platos": [
+            { "nombre": "Risotto Parmesano", "precio": 400 },
+            { "nombre": "Pasta Aglio e Olio", "precio": 550 },
+            { "nombre": "Gnocchi de Plátano Maduro", "precio": 185 },
+            { "nombre": "Habichuelas", "precio": 50 },
+            { "nombre": "Papas Trufadas", "precio": 170 },
+            { "nombre": "Arroz Frito", "precio": 180 },
+            { "nombre": "Yuca Frita", "precio": 170 },
+            { "nombre": "Aguacate", "precio": 65 },
+            { "nombre": "Casabe", "precio": 150 }
         ]
     }
 ]

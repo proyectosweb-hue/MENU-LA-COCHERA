@@ -14,7 +14,7 @@ async function loadMenu() {
 
 // Renderizar el menú
 function renderMenu(menuData) {
-    const container = document.getElementById('menuContainer');
+    const container = document.getElementById('menuGrid');
     container.innerHTML = '';
 
     menuData.forEach(category => {
@@ -37,7 +37,7 @@ function renderMenu(menuData) {
 
             const priceSpan = document.createElement('span');
             priceSpan.className = 'dish-price';
-            priceSpan.textContent = `$${dish.precio.toFixed(2)}`;
+            priceSpan.textContent = `RD$ ${dish.precio.toLocaleString('es-DO')}`;
 
             dishDiv.appendChild(nameSpan);
             dishDiv.appendChild(priceSpan);
