@@ -1,312 +1,238 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    /* Tinta y papel del póster vintage */
-    --ink: #0c0a07;
-    --ink2: #15110a;
-    --paper: #ece1c6;
-    --paper-dim: #b7a884;
-    --gold: #c79a3c;
-    --gold-soft: #e6c578;
-    /* Persianas / madera pintada (la mesa caribeña) */
-    --c-red: #c5362d;
-    --c-orange: #d97327;
-    --c-yellow: #e0b52e;
-    --c-green: #2f8a4a;
-    --c-teal: #1d7d7d;
-    --c-blue: #235b96;
-    --c-magenta: #b62e6b;
+    --ink:        #100d08;
+    --ink-soft:   #181208;
+    --paper:      #efe6cd;
+    --paper-dim:  #b6a47c;
+    --gold:       #c8a24e;
+    --gold-bright:#ecca7c;
+    --rule:       rgba(200,162,78,0.45);
 }
 
 html { font-size: 16px; }
 
-/* ===== MESA DE MADERA PINTADA (FONDO DE LA PÁGINA) =====
-   Tablones verticales en orden mezclado, con ranuras de persiana y vetas.
-   Sobre esta "mesa" reposa el cartel del menú. */
+/* ===== MESA DE MADERA OSCURA (FONDO) ===== */
 body {
     font-family: 'Crimson Text', serif;
-    line-height: 1.45;
-    padding: 26px 14px;
-    background:
-        /* viñeta: oscurece el centro donde va el cartel, deja vivos los bordes */
-        radial-gradient(ellipse 62% 72% at 50% 46%, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.15) 70%, transparent 100%),
-        /* ranuras horizontales de persiana */
-        repeating-linear-gradient(0deg,
-            rgba(0,0,0,0.20) 0, rgba(0,0,0,0) 1.4mm,
-            rgba(255,255,255,0.05) 3mm, rgba(0,0,0,0.20) 5mm),
-        /* surcos verticales entre tablones */
-        repeating-linear-gradient(90deg,
-            rgba(0,0,0,0.40) 0, rgba(0,0,0,0) 0.9mm,
-            rgba(0,0,0,0) 23.1mm, rgba(0,0,0,0.40) 24mm),
-        /* tablones pintados en orden mezclado (no espectral) */
-        repeating-linear-gradient(90deg,
-            var(--c-red)     0,     var(--c-red)     24mm,
-            var(--c-green)   24mm,  var(--c-green)   48mm,
-            var(--c-yellow)  48mm,  var(--c-yellow)  72mm,
-            var(--c-blue)    72mm,  var(--c-blue)    96mm,
-            var(--c-magenta) 96mm,  var(--c-magenta) 120mm,
-            var(--c-teal)    120mm, var(--c-teal)    144mm,
-            var(--c-orange)  144mm, var(--c-orange)  168mm,
-            var(--c-red)     168mm, var(--c-red)     192mm,
-            var(--c-blue)    192mm, var(--c-blue)    216mm,
-            var(--c-green)   216mm, var(--c-green)   240mm);
-    background-attachment: fixed;
+    line-height: 1.5;
+    color: var(--paper);
+    padding: 30px 16px;
     min-height: 100vh;
+    background:
+        radial-gradient(ellipse 70% 60% at 50% 38%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.72) 100%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.014) 0 2px, rgba(0,0,0,0.05) 2px 4px),
+        repeating-linear-gradient(90deg,
+            #2a1f13 0, #2a1f13 46px,
+            #241a0f 46px, #241a0f 48px),
+        #211810;
+    background-attachment: fixed;
 }
 
-.print-header {
-    text-align: center;
-    margin-bottom: 24px;
-}
+.print-header { text-align: center; margin-bottom: 26px; }
 
 #downloadBtn {
     background: var(--ink);
-    color: var(--gold-soft);
+    color: var(--gold-bright);
     border: 1px solid var(--gold);
-    padding: 12px 30px;
+    padding: 13px 32px;
     font-family: 'Oswald', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s;
 }
+#downloadBtn:hover { background: var(--gold); color: var(--ink); }
 
-#downloadBtn:hover { background: var(--gold); color: var(--ink); border-color: var(--gold-soft); }
-
-/* ===== MARCO FINO DEL CARTEL ===== */
+/* ===== EL CARTEL ===== */
 .frame {
     width: 210mm;
     max-width: 100%;
     margin: 0 auto;
-    padding: 4mm;
-    background: linear-gradient(160deg, #1c150c 0%, #0c0907 100%);
-    border: 1px solid rgba(199,154,60,0.45);
-    box-shadow: 0 32px 85px rgba(0, 0, 0, 0.85);
+    padding: 0;
+    box-shadow: 0 30px 90px rgba(0,0,0,0.8);
     position: relative;
 }
 
-/* ===== EL CARTEL (PÓSTER VINTAGE DE PERIÓDICO) ===== */
 .menu {
     position: relative;
-    overflow: hidden;
     background-color: var(--ink);
     background-image:
-        radial-gradient(circle at 50% -6%, rgba(199,154,60,0.13) 0%, transparent 45%),
-        radial-gradient(circle at 50% 108%, rgba(199,154,60,0.07) 0%, transparent 40%),
-        /* grano de papel envejecido */
-        repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0, rgba(0,0,0,0.02) 1px, rgba(255,255,255,0.012) 2px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0, rgba(0,0,0,0.015) 1px, rgba(255,255,255,0.01) 2px);
-    /* doble filete dorado + fino marco crema (como el del cartel de referencia) */
-    border: 2px solid var(--gold);
-    box-shadow:
-        inset 0 0 0 1px var(--ink),
-        inset 0 0 0 3px rgba(236,225,198,0.5),
-        inset 0 0 0 4px rgba(199,154,60,0.35),
-        inset 0 0 90px rgba(0,0,0,0.55);
-    padding: 14mm 13mm 10mm;
+        radial-gradient(ellipse at 50% 0%, rgba(200,162,78,0.10) 0%, transparent 42%),
+        radial-gradient(ellipse at 50% 100%, rgba(200,162,78,0.06) 0%, transparent 38%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.010) 0 1px, rgba(0,0,0,0.018) 1px 2px);
+    border: 8px solid var(--ink-soft);
+    outline: 1px solid var(--gold);
+    outline-offset: -11px;
+    padding: 16mm 15mm 12mm;
     color: var(--paper);
 }
 
-/* Helechos grabados en las esquinas inferiores (firma del cartel) */
-.menu::before,
-.menu::after {
+/* marco interior fino con esquinas en diamante */
+.menu > * { position: relative; z-index: 1; }
+
+/* ===== CABECERA ===== */
+.header {
+    text-align: center;
+    position: relative;
+    padding: 2mm 0 1mm;
+}
+
+/* helechos grabados que flanquean el título */
+.header::before, .header::after {
     content: '';
     position: absolute;
-    bottom: -8mm;
-    width: 64mm;
-    height: 180mm;
-    background: url('fern.svg') no-repeat bottom center;
+    top: 2mm;
+    width: 26mm;
+    height: 52mm;
+    background: url('fern.svg') no-repeat top center;
     background-size: contain;
-    opacity: 0.10;
-    pointer-events: none;
-    z-index: 0;
+    opacity: 0.55;
 }
-.menu::before { left: -10mm; transform: rotate(8deg); }
-.menu::after  { right: -10mm; transform: scaleX(-1) rotate(8deg); }
-
-/* asegura que el contenido quede por encima de los helechos */
-.header, .content, .footer, .rule-double { position: relative; z-index: 1; }
-
-/* ===== CABECERA / MASTHEAD DE GACETA ===== */
-.header { text-align: center; }
-
-/* línea superior de gaceta: ✦ SIEMPRE FRESCO ✦ SABOR DOMINICANO ✦ */
-.masthead-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4mm;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--paper-dim);
-    padding-bottom: 4mm;
-    margin-bottom: 5mm;
-    border-bottom: 1px solid rgba(199,154,60,0.4);
-}
-.masthead-top .star { color: var(--gold); font-size: 0.7rem; }
+.header::before { left: 4mm; transform: scaleX(-1); }
+.header::after  { right: 4mm; }
 
 .flourish { display: none; }
-
-.header-center { position: relative; }
-
-/* gran "N.º 25" tenue, al estilo del cartel de referencia */
-.no25 {
-    position: absolute;
-    top: -3mm; right: 0;
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 2.2rem;
-    line-height: 1;
-    color: var(--gold);
-    opacity: 0.35;
-    letter-spacing: -1px;
-}
-.no25 sup { font-size: 0.5em; vertical-align: super; }
+.masthead-top, .no25 { display: none; }
 
 .logo {
     display: none;
-    width: 42mm;
+    width: 40mm;
     height: auto;
-    margin: 0 auto 2mm;
+    margin: 0 auto 1mm;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));
 }
 .logo.logo-ok { display: block; }
 
 .text-logo h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 900;
     color: var(--paper);
-    letter-spacing: 2px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    letter-spacing: 3px;
+    line-height: 1;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 
-/* línea inferior de gaceta con EST. */
 .estd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4mm;
     font-family: 'Oswald', sans-serif;
     font-size: 0.62rem;
     letter-spacing: 5px;
-    color: var(--gold-soft);
+    color: var(--gold-bright);
     text-transform: uppercase;
-    margin-top: 3mm;
+    margin-top: 4mm;
 }
-.estd::before, .estd::after {
-    content: '';
-    width: 22mm;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold));
-}
-.estd::after { background: linear-gradient(90deg, var(--gold), transparent); }
 
 .tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 5mm;
     font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 0.82rem;
-    letter-spacing: 7px;
+    font-weight: 400;
+    font-size: 0.78rem;
+    letter-spacing: 6px;
     color: var(--paper);
     margin-top: 3mm;
 }
+.tagline::before, .tagline::after {
+    content: '';
+    width: 16mm;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+}
+.tagline::after { background: linear-gradient(90deg, var(--gold), transparent); }
 
 /* ===== Doble línea ornamental ===== */
 .rule-double {
     height: 0;
-    border-top: 2px solid var(--gold);
+    border-top: 1px solid var(--gold);
     border-bottom: 1px solid var(--gold);
-    padding-bottom: 2px;
-    margin: 6mm 0 7mm;
+    padding-bottom: 3px;
+    margin: 7mm 0 8mm;
     position: relative;
 }
 .rule-double::after {
     content: '◆';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -58%);
     background: var(--ink);
     color: var(--gold);
-    font-size: 0.8rem;
-    padding: 0 8px;
+    font-size: 0.85rem;
+    padding: 0 10px;
 }
 
-/* ===== CONTENIDO 2 COLUMNAS MULTIPÁGINA ===== */
-.content {
-    columns: 2;
-    column-gap: 11mm;
-}
+/* ===== CONTENIDO ===== */
+.content { columns: 2; column-gap: 13mm; }
 
-/* Banner de grupo (COMIDA / BEBIDAS) — placa de latón envejecido */
+/* Banner COMIDA / BEBIDAS — placa grabada, no barra plana */
 .group-banner {
     column-span: all;
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 8px;
+    font-size: 1.45rem;
+    letter-spacing: 10px;
+    text-indent: 10px;
     text-transform: uppercase;
-    color: var(--ink);
-    background: linear-gradient(180deg, var(--gold-soft) 0%, var(--gold) 55%, #a87d2b 100%);
-    padding: 3mm 0;
-    margin: 4mm 0 7mm;
-    border-top: 3px double var(--ink);
-    border-bottom: 3px double var(--ink);
-    box-shadow: inset 0 0 0 1px rgba(236,225,198,0.4), 0 2px 6px rgba(0,0,0,0.4);
-    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    color: var(--gold-bright);
+    padding: 4mm 0 4.5mm;
+    margin: 6mm 0 8mm;
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    position: relative;
 }
-
-.section {
-    break-inside: avoid;
-    margin-bottom: 6mm;
+.group-banner::before,
+.group-banner::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: rgba(200,162,78,0.4);
 }
+.group-banner::before { top: 1.4mm; }
+.group-banner::after  { bottom: 1.4mm; }
 
-/* Título de categoría estilo cintillo de periódico */
+.section { break-inside: avoid; margin-bottom: 7mm; }
+
+/* Título de categoría */
 .section-title {
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--gold-soft);
+    font-weight: 500;
+    font-size: 0.92rem;
+    color: var(--gold-bright);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 3.5mm;
+    letter-spacing: 4px;
+    text-indent: 4px;
+    margin-bottom: 4mm;
     position: relative;
 }
 .section-title span {
     background: var(--ink);
-    padding: 0 8px;
+    padding: 0 6mm;
     position: relative;
     z-index: 1;
 }
 .section-title::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0; right: 0;
+    top: 50%; left: 0; right: 0;
     height: 1px;
-    background: rgba(199,154,60,0.45);
+    background: var(--rule);
 }
 
 .item {
     display: flex;
     align-items: baseline;
     gap: 4px;
-    margin-bottom: 2.6mm;
+    margin-bottom: 3.2mm;
 }
-
 .item-name {
     font-family: 'Crimson Text', serif;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     font-weight: 600;
     color: var(--paper);
     letter-spacing: 0.3px;
@@ -314,75 +240,53 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .item-dots {
     flex: 1;
-    border-bottom: 1px dotted rgba(183,168,132,0.45);
-    margin: 0 2px 4px;
-    min-width: 10px;
+    border-bottom: 1px dotted rgba(182,164,124,0.5);
+    margin: 0 3px 5px;
+    min-width: 12px;
 }
-
 .item-price {
     font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.82rem;
-    color: var(--gold-soft);
+    color: var(--gold-bright);
     white-space: nowrap;
 }
 
 /* ===== PIE ===== */
-.footer {
-    text-align: center;
-    margin-top: 4mm;
-}
+.footer { text-align: center; margin-top: 6mm; }
 .footer p {
     font-family: 'Oswald', sans-serif;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     letter-spacing: 2px;
     color: var(--paper-dim);
     text-transform: uppercase;
 }
-.footer-sub {
-    color: var(--gold-soft) !important;
-    margin-top: 2mm;
-}
+.footer-sub { color: var(--gold-bright) !important; margin-top: 2.5mm; letter-spacing: 4px; }
 
-/* ===== IMPRESIÓN MULTIPÁGINA ===== */
+/* ===== IMPRESIÓN ===== */
 @media print {
     body { background: #fff; padding: 0; }
     .print-header { display: none; }
-
-    .frame {
-        width: 100%;
-        margin: 0;
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    .menu {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
+    .frame { width: 100%; margin: 0; box-shadow: none; }
+    .menu, .group-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .section { break-inside: avoid; }
     .group-banner { break-before: page; }
     .group-banner:first-of-type { break-before: auto; }
-
     @page { size: A4; margin: 0; }
 }
 
 /* ===== MÓVIL ===== */
 @media (max-width: 768px) {
-    body { padding: 12px 6px; }
-    .frame { width: 100%; padding: 3mm; }
-    .menu { padding: 11mm 7mm; }
-    .text-logo h1 { font-size: 2.2rem; }
-    .no25 { font-size: 1.5rem; top: -1mm; }
-    .logo { width: 36mm; }
+    body { padding: 14px 7px; }
+    .menu { padding: 12mm 7mm; border-width: 6px; outline-offset: -9px; }
+    .text-logo h1 { font-size: 2.3rem; }
+    .header::before, .header::after { width: 13mm; height: 30mm; opacity: 0.4; }
+    .header::before { left: -2mm; }
+    .header::after { right: -2mm; }
     .content { columns: 1; }
-    .group-banner { font-size: 1.2rem; letter-spacing: 5px; }
-    .estd::before, .estd::after { width: 12mm; }
-    .masthead-top { gap: 2mm; font-size: 0.52rem; letter-spacing: 2px; }
+    .group-banner { font-size: 1.15rem; letter-spacing: 6px; }
+    .tagline { letter-spacing: 3px; font-size: 0.68rem; }
+    .tagline::before, .tagline::after { width: 8mm; }
 }
