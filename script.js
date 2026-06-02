@@ -25,22 +25,28 @@ function makeSection(category) {
 
     const title = document.createElement('div');
     title.className = 'section-title';
-    title.textContent = category.nombre;
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = category.nombre;
+    title.appendChild(titleSpan);
     section.appendChild(title);
 
     category.platos.forEach(dish => {
         const item = document.createElement('div');
         item.className = 'item';
 
-        const name = document.createElement('div');
+        const name = document.createElement('span');
         name.className = 'item-name';
         name.textContent = dish.nombre;
 
-        const price = document.createElement('div');
+        const dots = document.createElement('span');
+        dots.className = 'item-dots';
+
+        const price = document.createElement('span');
         price.className = 'item-price';
         price.textContent = 'RD$ ' + dish.precio.toLocaleString('es-DO');
 
         item.appendChild(name);
+        item.appendChild(dots);
         item.appendChild(price);
         section.appendChild(item);
     });
