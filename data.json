@@ -86,90 +86,23 @@
         ]
     },
     {
-        "nombre": "Arroces y Pastas",
+        "nombre": "Bebidas",
         "platos": [
-            { "nombre": "Pasta Artesanal", "precio": 900 },
-            { "nombre": "Aurora Vodka Camarones", "precio": 950 },
-            { "nombre": "Aurora Vodka Pollo", "precio": 850 },
-            { "nombre": "Risotto de Churrasco", "precio": 1090 },
-            { "nombre": "Risotto de Chivo", "precio": 950 }
-        ]
-    },
-    {
-        "nombre": "Pescados y Mariscos",
-        "platos": [
-            { "nombre": "Pesca del Día", "precio": 810 },
-            { "nombre": "Salmón Cochera", "precio": 900 },
-            { "nombre": "Camarones al Ajillo", "precio": 985 },
-            { "nombre": "Camarones a la Criolla", "precio": 985 },
-            { "nombre": "Camarones Crispy", "precio": 995 },
-            { "nombre": "Calamares a la Romana", "precio": 800 }
-        ]
-    },
-    {
-        "nombre": "Green Salad",
-        "platos": [
-            { "nombre": "Ensalada César Pollo", "precio": 550 },
-            { "nombre": "Capressa Dominicana", "precio": 470 },
-            { "nombre": "Mix de Ensalada", "precio": 400 }
-        ]
-    },
-    {
-        "nombre": "Caldos para el Alma",
-        "platos": [
-            { "nombre": "Sancocho Típico", "precio": 590 },
-            { "nombre": "Sopa de Pescado", "precio": 500 }
-        ]
-    },
-    {
-        "nombre": "Best Seller",
-        "platos": [
-            { "nombre": "Bandeja Aplatanada", "precio": 850 },
-            { "nombre": "Tabla Parrillera x 2", "precio": 1200 },
-            { "nombre": "Tabla Parrillera x 4", "precio": 2200 },
-            { "nombre": "Tabla Parrillera x 6", "precio": 2750 },
-            { "nombre": "Pechuga al Maduro", "precio": 800 },
-            { "nombre": "Chicharrón Crujiente", "precio": 700 },
-            { "nombre": "Arroz Frito Estilo Cochera Pollo", "precio": 575 },
-            { "nombre": "Arroz Frito Estilo Cochera Camarones", "precio": 700 },
-            { "nombre": "Arroz Frito Estilo Cochera Chicharrón", "precio": 600 },
-            { "nombre": "Arroz Frito Estilo Cochera Res", "precio": 590 },
-            { "nombre": "Arroz Frito Estilo Cochera Cerdo", "precio": 590 }
-        ]
-    },
-    {
-        "nombre": "Postres",
-        "platos": [
-            { "nombre": "Brownie a la Moda", "precio": 375 },
-            { "nombre": "Cheesecake Fresa", "precio": 500 },
-            { "nombre": "Cheesecake Chinola", "precio": 500 },
-            { "nombre": "Flan de Leche", "precio": 300 }
-        ]
-    },
-    {
-        "nombre": "Guarniciones",
-        "platos": [
-            { "nombre": "Papas Fritas", "precio": 135 },
-            { "nombre": "Tostones", "precio": 150 },
-            { "nombre": "Arroz Blanco", "precio": 140 },
-            { "nombre": "Puré de Papas", "precio": 150 },
-            { "nombre": "Papas Baby al Romero", "precio": 100 },
-            { "nombre": "Vegetales al Grill", "precio": 200 },
-            { "nombre": "Ensalada Verde", "precio": 150 }
-        ]
-    },
-    {
-        "nombre": "Adicionales",
-        "platos": [
-            { "nombre": "Risotto Parmesano", "precio": 400 },
-            { "nombre": "Pasta Aglio e Olio", "precio": 550 },
-            { "nombre": "Gnocchi de Plátano Maduro", "precio": 185 },
-            { "nombre": "Habichuelas", "precio": 50 },
-            { "nombre": "Papas Trufadas", "precio": 170 },
-            { "nombre": "Arroz Frito", "precio": 180 },
-            { "nombre": "Yuca Frita", "precio": 170 },
-            { "nombre": "Aguacate", "precio": 65 },
-            { "nombre": "Casabe", "precio": 150 }
+            { "nombre": "Agua", "precio": 50 },
+            { "nombre": "Agua Perrier", "precio": 140 },
+            { "nombre": "Canada Dry Soda 16oz", "precio": 70 },
+            { "nombre": "Coca Cola 16oz", "precio": 70 },
+            { "nombre": "Sprite 16oz", "precio": 70 },
+            { "nombre": "Frozen Chinola", "precio": 205 },
+            { "nombre": "Jugo Chinola", "precio": 125 },
+            { "nombre": "Jugo Fresa", "precio": 135 },
+            { "nombre": "Jugo Limón", "precio": 120 },
+            { "nombre": "Presidente Pequeña", "precio": 200 },
+            { "nombre": "Corona Extra", "precio": 250 },
+            { "nombre": "Heineken", "precio": 200 },
+            { "nombre": "Mojitos", "precio": 350 },
+            { "nombre": "Margaritas", "precio": 420 },
+            { "nombre": "Piña Colada", "precio": 300 }
         ]
     }
 ]

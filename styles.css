@@ -12,17 +12,17 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #1a1a1a;
-    padding: 20px;
+    padding: 10px;
     min-height: 100vh;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     background: var(--color-dark);
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     max-width: 210mm;
@@ -32,18 +32,18 @@ body {
 
 .header h1 {
     color: var(--color-secondary);
-    margin-bottom: 15px;
-    font-size: 2.5em;
-    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    letter-spacing: 1px;
 }
 
 .download-btn {
     background: var(--color-primary);
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     cursor: pointer;
     transition: background 0.3s, transform 0.1s;
 }
@@ -58,49 +58,53 @@ body {
     max-width: 100%;
     margin: 0 auto;
     background: #fffdf7;
-    padding: 15mm;
+    padding: 8mm;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
+    height: 297mm;
+    overflow: hidden;
 }
 
 .menu-title {
     text-align: center;
-    margin-bottom: 8mm;
-    border-bottom: 3px double var(--color-primary);
-    padding-bottom: 6mm;
+    margin-bottom: 4mm;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 3mm;
 }
 
 .menu-title h2 {
     color: var(--color-primary);
-    font-size: 2.2em;
-    letter-spacing: 3px;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 .menu-title p {
     color: var(--color-text);
-    font-size: 0.85em;
-    margin-top: 4px;
+    font-size: 0.7em;
+    margin-top: 2px;
     letter-spacing: 1px;
 }
 
 .menu-grid {
-    columns: 2;
-    column-gap: 10mm;
+    columns: 3;
+    column-gap: 6mm;
+    height: calc(297mm - 30mm);
 }
 
 .category {
-    margin-bottom: 6mm;
+    margin-bottom: 4mm;
     break-inside: avoid;
 }
 
 .category-title {
-    border-bottom: 2px solid var(--color-secondary);
-    padding-bottom: 4px;
-    margin-bottom: 8px;
-    font-size: 1.15em;
+    border-bottom: 1.5px solid var(--color-secondary);
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 0.85em;
     color: var(--color-primary);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     font-weight: 700;
 }
 
@@ -108,12 +112,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 5px;
-    gap: 8px;
+    margin-bottom: 2px;
+    gap: 6px;
 }
 
 .dish-name {
-    font-size: 0.92em;
+    font-size: 0.75em;
     color: var(--color-text);
     font-weight: 500;
 }
@@ -121,7 +125,7 @@ body {
 .dish-price {
     color: var(--color-primary);
     font-weight: bold;
-    font-size: 0.92em;
+    font-size: 0.75em;
     white-space: nowrap;
 }
 
@@ -144,6 +148,11 @@ body {
         box-shadow: none;
         border-radius: 0;
         background: white;
+        height: auto;
+    }
+
+    .menu-grid {
+        height: auto;
     }
 
     .category {
@@ -152,30 +161,32 @@ body {
 
     @page {
         size: A4;
-        margin: 12mm;
+        margin: 8mm;
     }
 }
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 5px;
     }
 
     .header h1 {
-        font-size: 1.8em;
+        font-size: 1.4em;
     }
 
     .menu-container {
         width: 100%;
-        padding: 20px;
+        padding: 10px;
+        height: auto;
     }
 
     .menu-grid {
         columns: 1;
+        height: auto;
     }
 
     .menu-title h2 {
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
 }
