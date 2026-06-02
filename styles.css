@@ -89,6 +89,19 @@ body {
     z-index: 2;
 }
 
+.logo {
+    display: none;
+    max-width: 60mm;
+    max-height: 40mm;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo.logo-ok {
+    display: block;
+}
+
 .header-top {
     font-size: 0.65rem;
     letter-spacing: 4px;

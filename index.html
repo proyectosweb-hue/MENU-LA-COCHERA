@@ -16,10 +16,15 @@
 
     <div class="menu">
         <div class="header">
-            <div class="header-top">EST. LA COCHERA</div>
-            <h1>LA COCHERA</h1>
-            <div class="header-bottom">COCINA · PARRILLA · BAR</div>
-            <div class="palmera">🌴</div>
+            <img src="logo.png" alt="La Cochera" class="logo"
+                 onload="this.classList.add('logo-ok'); document.getElementById('textLogo').style.display='none';"
+                 onerror="this.style.display='none';">
+            <div id="textLogo" class="text-logo">
+                <div class="header-top">EST. LA COCHERA</div>
+                <h1>LA COCHERA</h1>
+                <div class="header-bottom">COCINA · PARRILLA · BAR</div>
+                <div class="palmera">🌴</div>
+            </div>
         </div>
 
         <div id="content" class="content">
