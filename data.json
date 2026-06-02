@@ -1,108 +1,815 @@
 [
-    {
-        "nombre": "Pa Picar",
-        "platos": [
-            { "nombre": "Maduro Boom", "precio": 500 },
-            { "nombre": "Focaccia Artesanal", "precio": 270 },
-            { "nombre": "Quipe de Chivo (2 und)", "precio": 250 },
-            { "nombre": "Tacos de Chicharrón", "precio": 450 },
-            { "nombre": "Tacos de Pollo", "precio": 420 }
-        ]
-    },
-    {
-        "nombre": "To Share",
-        "platos": [
-            { "nombre": "Trío de Mofongo Cerdo BBQ", "precio": 480 },
-            { "nombre": "Trío de Mofongo Mariscos a la Criolla", "precio": 530 },
-            { "nombre": "Trío de Mofongo Pollo a la Crema", "precio": 480 },
-            { "nombre": "Pork Crunch Bowl", "precio": 400 },
-            { "nombre": "Pop Corn Chicken Fries", "precio": 550 },
-            { "nombre": "Chilli Cheese Fries", "precio": 650 },
-            { "nombre": "Dominican Fries", "precio": 500 },
-            { "nombre": "Coche de Nacho", "precio": 600 },
-            { "nombre": "Alitas BBQ Original", "precio": 540 },
-            { "nombre": "Alitas BBQ Guayaba", "precio": 540 },
-            { "nombre": "Alitas Lemon and Pepper", "precio": 540 },
-            { "nombre": "Alitas Búfalo", "precio": 540 }
-        ]
-    },
-    {
-        "nombre": "Entradas",
-        "platos": [
-            { "nombre": "Salmón Tartar", "precio": 795 },
-            { "nombre": "Ceviche Clásico", "precio": 825 },
-            { "nombre": "Croquetas de Pollo", "precio": 495 },
-            { "nombre": "Mozzarella Stick", "precio": 450 },
-            { "nombre": "Dumpling de Cerdo", "precio": 500 }
-        ]
-    },
-    {
-        "nombre": "Lo Nuestro",
-        "platos": [
-            { "nombre": "Chivo Braseado Cochera", "precio": 900 },
-            { "nombre": "Longaniza de Cerdo Artesanal", "precio": 570 },
-            { "nombre": "Carne Salada Artesanal", "precio": 570 },
-            { "nombre": "Pechuga Rellena", "precio": 770 },
-            { "nombre": "Mofongo de Camarones", "precio": 950 },
-            { "nombre": "Mofongo de Chicharrón", "precio": 700 },
-            { "nombre": "Mofongo Longaniza", "precio": 600 },
-            { "nombre": "Mofongo Carne Salada", "precio": 600 },
-            { "nombre": "Mofongo Taki Taki", "precio": 850 }
-        ]
-    },
-    {
-        "nombre": "Grilled Meat",
-        "platos": [
-            { "nombre": "Parrillada Mar y Tierra", "precio": 2950 },
-            { "nombre": "Churrasco Angus 10 oz", "precio": 1500 },
-            { "nombre": "Filete de Res Angus 10 oz", "precio": 955 },
-            { "nombre": "Filete de Cerdo", "precio": 580 },
-            { "nombre": "Pechuga de Pollo al Grill", "precio": 650 },
-            { "nombre": "Baby Back Ribs St. Louis", "precio": 1200 }
-        ]
-    },
-    {
-        "nombre": "Comfort Food",
-        "platos": [
-            { "nombre": "American Cheese Burger", "precio": 475 },
-            { "nombre": "Sweet Cochera Burger", "precio": 530 },
-            { "nombre": "Honguito Burger", "precio": 590 },
-            { "nombre": "Cochera Club", "precio": 520 },
-            { "nombre": "York Chees", "precio": 470 },
-            { "nombre": "Burrito", "precio": 500 },
-            { "nombre": "Quesadilla", "precio": 490 }
-        ]
-    },
-    {
-        "nombre": "Pizzas",
-        "platos": [
-            { "nombre": "Special House Carnívora", "precio": 900 },
-            { "nombre": "Churrasco y Cebolla", "precio": 900 },
-            { "nombre": "César Pollo", "precio": 720 },
-            { "nombre": "Pizza Pepperoni", "precio": 630 },
-            { "nombre": "Pizza Margarita", "precio": 630 },
-            { "nombre": "Pizza Maíz", "precio": 630 },
-            { "nombre": "Pizza Jamón", "precio": 630 }
-        ]
-    },
-    {
-        "nombre": "Bebidas",
-        "platos": [
-            { "nombre": "Agua", "precio": 50 },
-            { "nombre": "Agua Perrier", "precio": 140 },
-            { "nombre": "Canada Dry Soda 16oz", "precio": 70 },
-            { "nombre": "Coca Cola 16oz", "precio": 70 },
-            { "nombre": "Sprite 16oz", "precio": 70 },
-            { "nombre": "Frozen Chinola", "precio": 205 },
-            { "nombre": "Jugo Chinola", "precio": 125 },
-            { "nombre": "Jugo Fresa", "precio": 135 },
-            { "nombre": "Jugo Limón", "precio": 120 },
-            { "nombre": "Presidente Pequeña", "precio": 200 },
-            { "nombre": "Corona Extra", "precio": 250 },
-            { "nombre": "Heineken", "precio": 200 },
-            { "nombre": "Mojitos", "precio": 350 },
-            { "nombre": "Margaritas", "precio": 420 },
-            { "nombre": "Piña Colada", "precio": 300 }
-        ]
-    }
+  {
+    "nombre": "Pa Picar",
+    "platos": [
+      {
+        "nombre": "MADURO BOOM",
+        "precio": 500
+      },
+      {
+        "nombre": "FOCACCIA ARTESANAL",
+        "precio": 270
+      },
+      {
+        "nombre": "QUIPE DE CHIVO (2 UND)",
+        "precio": 250
+      },
+      {
+        "nombre": "TACOS DE CHICHARRON",
+        "precio": 450
+      },
+      {
+        "nombre": "TACOS DE POLLO",
+        "precio": 420
+      }
+    ]
+  },
+  {
+    "nombre": "To Share",
+    "platos": [
+      {
+        "nombre": "TRIO DE MOFONGO CERDO BBQ",
+        "precio": 480
+      },
+      {
+        "nombre": "TRIO DE MOFONGO MARISCOS A LA CRIOLLA",
+        "precio": 530
+      },
+      {
+        "nombre": "TRIO DE MOFONGO POLLO A LA CREMA",
+        "precio": 480
+      },
+      {
+        "nombre": "PORK CRUNCH BOWL",
+        "precio": 400
+      },
+      {
+        "nombre": "POP CORN CHICKEN FRIES",
+        "precio": 550
+      },
+      {
+        "nombre": "CHILLI CHEESE FRIES",
+        "precio": 650
+      },
+      {
+        "nombre": "DOMINICAN FRIES",
+        "precio": 500
+      },
+      {
+        "nombre": "COCHE DE NACHO",
+        "precio": 600
+      },
+      {
+        "nombre": "ALITAS BBQ ORIGINAL",
+        "precio": 540
+      },
+      {
+        "nombre": "ALITAS BBQ GUAYABA",
+        "precio": 540
+      },
+      {
+        "nombre": "ALITAS LEMON AND PEPPER",
+        "precio": 540
+      },
+      {
+        "nombre": "ALITAS BUFALO",
+        "precio": 540
+      }
+    ]
+  },
+  {
+    "nombre": "Entradas",
+    "platos": [
+      {
+        "nombre": "SALMON TARTAR",
+        "precio": 795
+      },
+      {
+        "nombre": "CEVICHE CLÁSICO",
+        "precio": 825
+      },
+      {
+        "nombre": "CROQUETAS DE POLLO",
+        "precio": 495
+      },
+      {
+        "nombre": "MOZZARELLA STICK",
+        "precio": 450
+      },
+      {
+        "nombre": "DUMPLING DE CERDO",
+        "precio": 500
+      }
+    ]
+  },
+  {
+    "nombre": "Lo Nuestro",
+    "platos": [
+      {
+        "nombre": "CHIVO BRASEADO COCHERA",
+        "precio": 900
+      },
+      {
+        "nombre": "LONGANIZA DE CERDO ARTESANAL",
+        "precio": 570
+      },
+      {
+        "nombre": "CARNE SALADA ARTESANAL",
+        "precio": 570
+      },
+      {
+        "nombre": "PECHUGA RELLENA",
+        "precio": 770
+      },
+      {
+        "nombre": "MOFONGO DE CAMARONES",
+        "precio": 950
+      },
+      {
+        "nombre": "MOFONGO DE CHICHARRON",
+        "precio": 700
+      },
+      {
+        "nombre": "MOFONGO LONGANIZA",
+        "precio": 600
+      },
+      {
+        "nombre": "MOFONGO CARNE SALADA",
+        "precio": 600
+      },
+      {
+        "nombre": "MOFONGO TAKI TAKI",
+        "precio": 850
+      }
+    ]
+  },
+  {
+    "nombre": "Grilled Meat",
+    "platos": [
+      {
+        "nombre": "PARRILLADA MAR Y TIERRA",
+        "precio": 2950
+      },
+      {
+        "nombre": "CHURRASCO ANGUS 10 OZ",
+        "precio": 1500
+      },
+      {
+        "nombre": "FILETE DE RES ANGUS 10 OZ",
+        "precio": 955
+      },
+      {
+        "nombre": "FILETE DE CERDO",
+        "precio": 580
+      },
+      {
+        "nombre": "PECHUGA DE POLLO AL GRILL",
+        "precio": 650
+      },
+      {
+        "nombre": "BABY BACK RIBS ST. LOUIS",
+        "precio": 1200
+      }
+    ]
+  },
+  {
+    "nombre": "Comfort Food",
+    "platos": [
+      {
+        "nombre": "AMERICAN CHEESE BURGER",
+        "precio": 475
+      },
+      {
+        "nombre": "SWEET COCHERA BURGER",
+        "precio": 530
+      },
+      {
+        "nombre": "HONGUITO BURGER",
+        "precio": 590
+      },
+      {
+        "nombre": "COCHERA CLUB",
+        "precio": 520
+      },
+      {
+        "nombre": "YORK CHEES",
+        "precio": 470
+      },
+      {
+        "nombre": "BURRITO",
+        "precio": 500
+      },
+      {
+        "nombre": "QUESADILLA",
+        "precio": 490
+      }
+    ]
+  },
+  {
+    "nombre": "Pizzas",
+    "platos": [
+      {
+        "nombre": "SPECIAL HOUSE CARNIVORA",
+        "precio": 900
+      },
+      {
+        "nombre": "CHURRASCO Y CEBOLLA",
+        "precio": 900
+      },
+      {
+        "nombre": "CESAR POLLO",
+        "precio": 720
+      },
+      {
+        "nombre": "PIZZAS PEPPERONI",
+        "precio": 630
+      },
+      {
+        "nombre": "PIZZAS MARGARITA",
+        "precio": 630
+      },
+      {
+        "nombre": "PIZZAS MAIZ",
+        "precio": 630
+      },
+      {
+        "nombre": "PIZZAS JAMON",
+        "precio": 630
+      }
+    ]
+  },
+  {
+    "nombre": "Arroces Y Pastas",
+    "platos": [
+      {
+        "nombre": "PASTA ARTESANAL",
+        "precio": 900
+      },
+      {
+        "nombre": "AURORA VODKA CAMARONES",
+        "precio": 950
+      },
+      {
+        "nombre": "AURORA VODKA POLLO",
+        "precio": 850
+      },
+      {
+        "nombre": "RISOTTO DE CHURRASCO",
+        "precio": 1090
+      },
+      {
+        "nombre": "RISOTTO DE CHIVO",
+        "precio": 950
+      }
+    ]
+  },
+  {
+    "nombre": "Pescados Y Mariscos",
+    "platos": [
+      {
+        "nombre": "PESCA DEL DIA",
+        "precio": 810
+      },
+      {
+        "nombre": "SALMON COCHERA",
+        "precio": 900
+      },
+      {
+        "nombre": "CAMARONES AL AJILLO",
+        "precio": 985
+      },
+      {
+        "nombre": "CAMARONES A LA CRIOLLA",
+        "precio": 985
+      },
+      {
+        "nombre": "CAMARONES CRISPY",
+        "precio": 995
+      },
+      {
+        "nombre": "CALAMARES A LA ROMANA",
+        "precio": 800
+      }
+    ]
+  },
+  {
+    "nombre": "Green Salad",
+    "platos": [
+      {
+        "nombre": "ENSALADA CESAR POLLO",
+        "precio": 550
+      },
+      {
+        "nombre": "CAPRESSA DOMINICANA",
+        "precio": 470
+      },
+      {
+        "nombre": "MIX DE ENSALADA",
+        "precio": 400
+      }
+    ]
+  },
+  {
+    "nombre": "Caldos Para El Alma",
+    "platos": [
+      {
+        "nombre": "SANCOCHO TIPICO",
+        "precio": 590
+      },
+      {
+        "nombre": "SOPA DE PESCADO",
+        "precio": 500
+      }
+    ]
+  },
+  {
+    "nombre": "Best Seller",
+    "platos": [
+      {
+        "nombre": "BANDEJA APLATANADA",
+        "precio": 850
+      },
+      {
+        "nombre": "TABLA PARRILLERA * 2",
+        "precio": 1200
+      },
+      {
+        "nombre": "TABLA PARRILLERA * 4",
+        "precio": 2200
+      },
+      {
+        "nombre": "TABLA PARRILLERA * 6",
+        "precio": 2750
+      },
+      {
+        "nombre": "PECHUGA AL MADURO",
+        "precio": 800
+      },
+      {
+        "nombre": "CHICHARRON CRUIJIENTE",
+        "precio": 700
+      },
+      {
+        "nombre": "ARROZ FRITO ESTILO COCHERA POLLO",
+        "precio": 575
+      },
+      {
+        "nombre": "ARROZ FRITO ESTILO COCHERA CAMARONES",
+        "precio": 700
+      },
+      {
+        "nombre": "ARROZ FRITO ESTILO COCHERA CHICHARRON",
+        "precio": 600
+      },
+      {
+        "nombre": "ARROZ FRITO ESTILO COCHERA RES",
+        "precio": 590
+      },
+      {
+        "nombre": "ARROZ FRITO ESTILO COCHERA CERDO",
+        "precio": 590
+      }
+    ]
+  },
+  {
+    "nombre": "Postres",
+    "platos": [
+      {
+        "nombre": "BROWNIE A LA MODA",
+        "precio": 375
+      },
+      {
+        "nombre": "CHEESEECAKE FRESA",
+        "precio": 500
+      },
+      {
+        "nombre": "CHEESEECAKE CHINOLA",
+        "precio": 500
+      },
+      {
+        "nombre": "FLAN DE LECHE",
+        "precio": 300
+      }
+    ]
+  },
+  {
+    "nombre": "Guarniciones",
+    "platos": [
+      {
+        "nombre": "PAPAS FRITAS",
+        "precio": 135
+      },
+      {
+        "nombre": "TOSTONES",
+        "precio": 150
+      },
+      {
+        "nombre": "ARROZ BLANCO",
+        "precio": 140
+      },
+      {
+        "nombre": "PURE DE PAPAS",
+        "precio": 150
+      },
+      {
+        "nombre": "PAPAS BABY AL ROMERO",
+        "precio": 100
+      },
+      {
+        "nombre": "VEGETALES AL GRILL",
+        "precio": 200
+      },
+      {
+        "nombre": "ENSALADA VERDE",
+        "precio": 150
+      }
+    ]
+  },
+  {
+    "nombre": "Adicionales",
+    "platos": [
+      {
+        "nombre": "RISOTTO PARMESANO",
+        "precio": 400
+      },
+      {
+        "nombre": "PASTA AGLIO E OLIO",
+        "precio": 550
+      },
+      {
+        "nombre": "GNOCCHI DE PLATANO MADURO",
+        "precio": 185
+      },
+      {
+        "nombre": "HABICHUELAS",
+        "precio": 50
+      },
+      {
+        "nombre": "PAPAS TRUFADAS",
+        "precio": 170
+      },
+      {
+        "nombre": "ARROZ FRITO",
+        "precio": 180
+      },
+      {
+        "nombre": "YUCA FRITA",
+        "precio": 170
+      },
+      {
+        "nombre": "AGUACATE",
+        "precio": 65
+      },
+      {
+        "nombre": "CASABE",
+        "precio": 150
+      }
+    ]
+  },
+  {
+    "nombre": "Refrescos",
+    "platos": [
+      {
+        "nombre": "Agua",
+        "precio": 50
+      },
+      {
+        "nombre": "Agua Perrier",
+        "precio": 140
+      },
+      {
+        "nombre": "Canada Dry Soda 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Canada Dry Tónica 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Coca Cola 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Coca-Cola 20oz",
+        "precio": 85
+      },
+      {
+        "nombre": "Country Club Frambuesa 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Country Club Merengue 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Country Club Uva 16oz",
+        "precio": 70
+      },
+      {
+        "nombre": "Ginger Ale 16oz",
+        "precio": 100
+      },
+      {
+        "nombre": "San Pellegrino Aranciata",
+        "precio": 200
+      },
+      {
+        "nombre": "Sprite 16oz",
+        "precio": 70
+      }
+    ]
+  },
+  {
+    "nombre": "Frozen",
+    "platos": [
+      {
+        "nombre": "Frozen Chinola",
+        "precio": 205
+      },
+      {
+        "nombre": "Frozen Flor de Jamaica",
+        "precio": 205
+      },
+      {
+        "nombre": "Frozen Fresa",
+        "precio": 205
+      },
+      {
+        "nombre": "Frozen Limón",
+        "precio": 205
+      }
+    ]
+  },
+  {
+    "nombre": "Jugos",
+    "platos": [
+      {
+        "nombre": "Chinola",
+        "precio": 125
+      },
+      {
+        "nombre": "Fresa",
+        "precio": 135
+      },
+      {
+        "nombre": "Limón",
+        "precio": 120
+      }
+    ]
+  },
+  {
+    "nombre": "Cervezas",
+    "platos": [
+      {
+        "nombre": "5.0 Craft Beer \"Tricolor\"",
+        "precio": 250
+      },
+      {
+        "nombre": "5.0 Lager Beer \"Roja\"",
+        "precio": 250
+      },
+      {
+        "nombre": "5.0 Pilsener Beer \"Negra\"",
+        "precio": 250
+      },
+      {
+        "nombre": "5.0 Weiss Beer \"Amarilla\"",
+        "precio": 250
+      },
+      {
+        "nombre": "Blue Moon",
+        "precio": 250
+      },
+      {
+        "nombre": "Bohemia Especial",
+        "precio": 150
+      },
+      {
+        "nombre": "Corona Extra",
+        "precio": 250
+      },
+      {
+        "nombre": "Heineken",
+        "precio": 200
+      },
+      {
+        "nombre": "Modelo Negra",
+        "precio": 250
+      },
+      {
+        "nombre": "Modelo Rubia",
+        "precio": 250
+      },
+      {
+        "nombre": "One Pequeña",
+        "precio": 150
+      },
+      {
+        "nombre": "Paulaner Negra",
+        "precio": 350
+      },
+      {
+        "nombre": "Paulaner Rubia",
+        "precio": 350
+      },
+      {
+        "nombre": "Presidente Grande Normal",
+        "precio": 275
+      },
+      {
+        "nombre": "Presidente Light Grande",
+        "precio": 275
+      },
+      {
+        "nombre": "Presidente Light Pequeña",
+        "precio": 200
+      },
+      {
+        "nombre": "Presidente Normal Pequeña",
+        "precio": 200
+      },
+      {
+        "nombre": "Smirnoff Ice Green Apple",
+        "precio": 222
+      },
+      {
+        "nombre": "Smirnoff Ice Normal",
+        "precio": 220
+      },
+      {
+        "nombre": "Stella Artois",
+        "precio": 230
+      }
+    ]
+  },
+  {
+    "nombre": "Cocteles",
+    "platos": [
+      {
+        "nombre": "Aperol Spritz",
+        "precio": 360
+      },
+      {
+        "nombre": "Caipirinha",
+        "precio": 310
+      },
+      {
+        "nombre": "Coco Loco",
+        "precio": 300
+      },
+      {
+        "nombre": "Long Island",
+        "precio": 420
+      },
+      {
+        "nombre": "Margaritas",
+        "precio": 420
+      },
+      {
+        "nombre": "Mickey Mouse",
+        "precio": 150
+      },
+      {
+        "nombre": "Mojitos",
+        "precio": 350
+      },
+      {
+        "nombre": "Piña Colada",
+        "precio": 300
+      },
+      {
+        "nombre": "Sangría de Temporada",
+        "precio": 300
+      }
+    ]
+  },
+  {
+    "nombre": "Shots",
+    "platos": [
+      {
+        "nombre": "Fireball",
+        "precio": 300
+      },
+      {
+        "nombre": "Frangelico",
+        "precio": 300
+      },
+      {
+        "nombre": "Green Tea",
+        "precio": 300
+      },
+      {
+        "nombre": "Jäger Bomb",
+        "precio": 300
+      },
+      {
+        "nombre": "Kamikaze",
+        "precio": 300
+      },
+      {
+        "nombre": "Licor 43",
+        "precio": 300
+      },
+      {
+        "nombre": "Romana Sambuca",
+        "precio": 300
+      }
+    ]
+  },
+  {
+    "nombre": "Ron",
+    "platos": [
+      {
+        "nombre": "Barceló Imperial",
+        "precio": 300
+      },
+      {
+        "nombre": "Brugal Añejo",
+        "precio": 240
+      },
+      {
+        "nombre": "Brugal Doble Reserva",
+        "precio": 270
+      },
+      {
+        "nombre": "Brugal Extra Viejo",
+        "precio": 240
+      },
+      {
+        "nombre": "Brugal Leyenda",
+        "precio": 300
+      },
+      {
+        "nombre": "Brugal XV",
+        "precio": 270
+      }
+    ]
+  },
+  {
+    "nombre": "Whisky",
+    "platos": [
+      {
+        "nombre": "Buchanan's Deluxe 12 años",
+        "precio": 480
+      },
+      {
+        "nombre": "Chivas Regal 12 años",
+        "precio": 390
+      },
+      {
+        "nombre": "Chivas Regal 18 años",
+        "precio": 720
+      },
+      {
+        "nombre": "Johnnie Walker Black Label 12 años",
+        "precio": 420
+      },
+      {
+        "nombre": "Johnnie Walker Doble Black",
+        "precio": 540
+      }
+    ]
+  },
+  {
+    "nombre": "Vino Tinto",
+    "platos": [
+      {
+        "nombre": "19 Crimes, Red Blend (Australia)",
+        "precio": 2950
+      },
+      {
+        "nombre": "Apotic Red Blend (California)",
+        "precio": 2650
+      },
+      {
+        "nombre": "Bogle, Merlot (California)",
+        "precio": 2850
+      },
+      {
+        "nombre": "Navigator, Cabernet Sauvignon (California)",
+        "precio": 2950
+      },
+      {
+        "nombre": "Vino Ramon Bilbao Botella",
+        "precio": 1900
+      },
+      {
+        "nombre": "Vino Ramon Bilbao copa",
+        "precio": 380
+      }
+    ]
+  },
+  {
+    "nombre": "Vino Blanco",
+    "platos": [
+      {
+        "nombre": "Cantina Zaccagnini, Pinot Grigio (Italia)",
+        "precio": 2820
+      },
+      {
+        "nombre": "Matua - Sauvignon Blanc (New Zealand)",
+        "precio": 2700
+      }
+    ]
+  }
 ]

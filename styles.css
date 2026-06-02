@@ -10,25 +10,26 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-    background: #fafafa;
-    padding: 20px;
-    line-height: 1.5;
+    background: #e9e9e9;
+    padding: 24px 12px;
+    line-height: 1.4;
 }
 
 .print-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 #downloadBtn {
     background: #8b3a3a;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 13px 28px;
     font-size: 0.9rem;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 4px;
     font-weight: 600;
+    letter-spacing: 0.5px;
     transition: all 0.2s;
 }
 
@@ -36,65 +37,74 @@ body {
     background: #6b2a2a;
 }
 
-/* === MENÚ A4 === */
+/* === HOJA A4 === */
 .menu {
     width: 210mm;
-    height: 297mm;
     max-width: 100%;
     margin: 0 auto;
     background: white;
-    padding: 18mm;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    padding: 16mm 15mm;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* === ENCABEZADO === */
 .header {
     text-align: center;
-    margin-bottom: 6mm;
-    padding-bottom: 4mm;
-    border-bottom: 2px solid #333;
+    margin-bottom: 8mm;
+    padding-bottom: 5mm;
+    border-bottom: 3px double #8b3a3a;
 }
 
 .header h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     color: #1a1a1a;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 2px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
 }
 
 .header p {
-    font-size: 0.75rem;
-    color: #666;
-    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: #8b3a3a;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
+/* === CONTENIDO EN 2 COLUMNAS QUE FLUYE EN VARIAS PÁGINAS === */
 .content {
-    flex: 1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     columns: 2;
-    column-gap: 8mm;
+    column-gap: 12mm;
+}
+
+/* Banner de grupo (COMIDA / BEBIDAS) ocupa ambas columnas */
+.group-banner {
+    column-span: all;
+    text-align: center;
+    background: #8b3a3a;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 3mm 0;
+    margin: 4mm 0 6mm;
 }
 
 .section {
     break-inside: avoid;
-    margin-bottom: 5mm;
+    margin-bottom: 6mm;
 }
 
 .section-title {
     font-weight: 700;
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 1rem;
+    color: #8b3a3a;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 2mm;
-    padding-bottom: 1mm;
-    border-bottom: 1px solid #ccc;
+    letter-spacing: 1.5px;
+    margin-bottom: 3mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1.5px solid #d4b483;
 }
 
 .item {
@@ -102,31 +112,23 @@ body {
     justify-content: space-between;
     align-items: baseline;
     gap: 8px;
-    margin-bottom: 1.5mm;
-    font-size: 0.85rem;
+    margin-bottom: 2.2mm;
+    font-size: 0.86rem;
 }
 
 .item-name {
-    color: #222;
+    color: #2a2a2a;
     font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .item-price {
     color: #8b3a3a;
-    font-weight: 600;
+    font-weight: 700;
     white-space: nowrap;
 }
 
-.footer {
-    text-align: center;
-    font-size: 0.7rem;
-    color: #999;
-    margin-top: 4mm;
-    padding-top: 2mm;
-    border-top: 1px solid #ddd;
-}
-
-/* === IMPRESIÓN === */
+/* === IMPRESIÓN MULTIPÁGINA === */
 @media print {
     body {
         background: white;
@@ -139,37 +141,47 @@ body {
 
     .menu {
         width: 100%;
-        height: auto;
-        max-height: none;
         margin: 0;
-        padding: 8mm;
+        padding: 0;
         box-shadow: none;
+    }
+
+    .section {
+        break-inside: avoid;
+    }
+
+    .group-banner {
+        break-before: page;
+    }
+
+    /* El primer banner (COMIDA) no fuerza salto de página */
+    .group-banner:first-of-type {
+        break-before: auto;
     }
 
     @page {
         size: A4;
-        margin: 8mm;
+        margin: 12mm;
     }
 }
 
-/* === MOBILE === */
+/* === MÓVIL === */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 10px 6px;
     }
 
     .menu {
         width: 100%;
-        height: auto;
-        padding: 15mm;
+        padding: 12mm 8mm;
     }
 
     .header h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
     }
 
     .content {
         columns: 1;
-        column-gap: 0;
     }
 }
