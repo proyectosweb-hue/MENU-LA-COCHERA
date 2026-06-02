@@ -8,6 +8,13 @@
     --gold:       #c8a24e;
     --gold-bright:#ecca7c;
     --rule:       rgba(200,162,78,0.45);
+    /* Colores de marca La Cochera (persianas de madera) */
+    --c-red:     #c43c30;
+    --c-green:   #2f8b4e;
+    --c-yellow:  #d8b133;
+    --c-blue:    #265f93;
+    --c-magenta: #ad3168;
+    --c-teal:    #1c7e7c;
 }
 
 html { font-size: 16px; }
@@ -17,15 +24,31 @@ body {
     font-family: 'Crimson Text', serif;
     line-height: 1.5;
     color: var(--paper);
-    padding: 30px 16px;
+    padding: 34px 18px;
     min-height: 100vh;
     background:
-        radial-gradient(ellipse 70% 60% at 50% 38%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.72) 100%),
-        repeating-linear-gradient(0deg, rgba(255,255,255,0.014) 0 2px, rgba(0,0,0,0.05) 2px 4px),
+        /* viñeta suave: realza el cartel sin apagar los colores del borde */
+        radial-gradient(ellipse 58% 56% at 50% 42%, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.42) 100%),
+        /* lamas horizontales de la persiana: brillo arriba + sombra abajo */
+        repeating-linear-gradient(180deg,
+            rgba(255,255,255,0.16) 0px,
+            rgba(255,255,255,0.02) 3px,
+            rgba(0,0,0,0.03) 9px,
+            rgba(0,0,0,0.24) 15px,
+            rgba(255,255,255,0.10) 16px),
+        /* surcos verticales entre tablones */
         repeating-linear-gradient(90deg,
-            #2a1f13 0, #2a1f13 46px,
-            #241a0f 46px, #241a0f 48px),
-        #211810;
+            rgba(0,0,0,0.45) 0px, rgba(255,255,255,0.08) 2px,
+            rgba(0,0,0,0) 4px,
+            rgba(0,0,0,0) 74px, rgba(0,0,0,0.45) 76px),
+        /* color de cada tablón, en el orden de marca */
+        repeating-linear-gradient(90deg,
+            var(--c-red)     0,     var(--c-red)     76px,
+            var(--c-green)   76px,  var(--c-green)   152px,
+            var(--c-yellow)  152px, var(--c-yellow)  228px,
+            var(--c-blue)    228px, var(--c-blue)    304px,
+            var(--c-magenta) 304px, var(--c-magenta) 380px,
+            var(--c-teal)    380px, var(--c-teal)    456px);
     background-attachment: fixed;
 }
 
