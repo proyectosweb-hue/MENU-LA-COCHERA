@@ -5,188 +5,245 @@
 }
 
 :root {
-    --color-primary: #8b1e1e;
-    --color-secondary: #d4a437;
-    --color-dark: #2b2b2b;
-    --color-text: #333;
+    --ink: #2a211b;
+    --wine: #7a1f1f;
+    --gold: #b08642;
+    --gold-soft: #c9a86a;
+    --paper: #fbf7ef;
+    --muted: #6b5d4f;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: #1a1a1a;
-    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background: #211c18;
+    background-image: radial-gradient(circle at 50% 0%, #3a302a 0%, #1a1512 70%);
+    padding: 24px 12px 48px;
     min-height: 100vh;
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-    background: var(--color-dark);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+/* ===== Barra de herramientas (no se imprime) ===== */
+.toolbar {
     max-width: 210mm;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header h1 {
-    color: var(--color-secondary);
-    margin-bottom: 10px;
-    font-size: 2em;
-    letter-spacing: 1px;
+    margin: 0 auto 18px;
+    text-align: center;
 }
 
 .download-btn {
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    background: var(--wine);
+    color: #f6e9d2;
+    border: 1px solid var(--gold-soft);
+    padding: 12px 28px;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s, transform 0.1s;
+    transition: all 0.2s ease;
 }
 
 .download-btn:hover {
-    background: #a52828;
+    background: #8f2626;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
     transform: translateY(-1px);
 }
 
-.menu-container {
+/* ===== Página del menú (A4) ===== */
+.menu-page {
     width: 210mm;
+    min-height: 297mm;
     max-width: 100%;
     margin: 0 auto;
-    background: #fffdf7;
-    padding: 8mm;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    height: 297mm;
-    overflow: hidden;
+    background: var(--paper);
+    background-image:
+        radial-gradient(circle at 100% 0%, rgba(176, 134, 66, 0.06) 0%, transparent 35%),
+        radial-gradient(circle at 0% 100%, rgba(122, 31, 31, 0.05) 0%, transparent 35%);
+    padding: 16mm 14mm;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    border: 1px solid #e7dcc7;
+    position: relative;
 }
 
-.menu-title {
+/* Marco decorativo interior */
+.menu-page::before {
+    content: '';
+    position: absolute;
+    inset: 7mm;
+    border: 1px solid var(--gold-soft);
+    pointer-events: none;
+    opacity: 0.55;
+}
+
+/* ===== Encabezado ===== */
+.menu-header {
     text-align: center;
-    margin-bottom: 4mm;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 3mm;
+    margin-bottom: 9mm;
+    position: relative;
+    z-index: 1;
 }
 
-.menu-title h2 {
-    color: var(--color-primary);
-    font-size: 1.6em;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.menu-title p {
-    color: var(--color-text);
-    font-size: 0.7em;
-    margin-top: 2px;
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3.1rem;
+    color: var(--wine);
+    line-height: 1;
     letter-spacing: 1px;
+    margin: 4px 0;
 }
 
+.brand-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.brand-line {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 8px auto;
+}
+
+/* ===== Cuadrícula de categorías ===== */
 .menu-grid {
-    columns: 3;
-    column-gap: 6mm;
-    height: calc(297mm - 30mm);
+    columns: 2;
+    column-gap: 12mm;
+    position: relative;
+    z-index: 1;
 }
 
 .category {
-    margin-bottom: 4mm;
     break-inside: avoid;
+    margin-bottom: 6mm;
 }
 
 .category-title {
-    border-bottom: 1.5px solid var(--color-secondary);
-    padding-bottom: 2px;
-    margin-bottom: 4px;
-    font-size: 0.85em;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 4mm;
+    position: relative;
 }
 
+.category-title span {
+    background: var(--paper);
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.category-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gold-soft);
+    z-index: 0;
+}
+
+/* ===== Platos con línea punteada clásica ===== */
 .dish {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 2px;
-    gap: 6px;
+    margin-bottom: 2.4mm;
+    gap: 4px;
 }
 
 .dish-name {
-    font-size: 0.75em;
-    color: var(--color-text);
-    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.06rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dish-leader {
+    flex: 1;
+    border-bottom: 1px dotted #c2b2a0;
+    margin: 0 2px 4px;
+    min-width: 8px;
 }
 
 .dish-price {
-    color: var(--color-primary);
-    font-weight: bold;
-    font-size: 0.75em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--wine);
     white-space: nowrap;
 }
 
-/* Estilos para impresión en A4 */
+/* ===== Pie ===== */
+.menu-footer {
+    text-align: center;
+    margin-top: 8mm;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Impresión A4 ===== */
 @media print {
     body {
-        background: white;
+        background: #fff;
         padding: 0;
     }
 
-    .header {
+    .toolbar {
         display: none;
     }
 
-    .menu-container {
+    .menu-page {
         width: 100%;
-        max-width: 100%;
-        padding: 0;
+        min-height: auto;
         margin: 0;
         box-shadow: none;
-        border-radius: 0;
-        background: white;
-        height: auto;
-    }
-
-    .menu-grid {
-        height: auto;
-    }
-
-    .category {
-        break-inside: avoid;
+        border: none;
+        padding: 6mm 8mm;
     }
 
     @page {
         size: A4;
-        margin: 8mm;
+        margin: 6mm;
     }
 }
 
-/* Responsive para móviles */
+/* ===== Móvil ===== */
 @media (max-width: 768px) {
     body {
-        padding: 5px;
+        padding: 12px 6px;
     }
 
-    .header h1 {
-        font-size: 1.4em;
-    }
-
-    .menu-container {
+    .menu-page {
         width: 100%;
-        padding: 10px;
-        height: auto;
+        padding: 10mm 7mm;
+    }
+
+    .menu-page::before {
+        inset: 4mm;
     }
 
     .menu-grid {
         columns: 1;
-        height: auto;
     }
 
-    .menu-title h2 {
-        font-size: 1.3em;
+    .brand {
+        font-size: 2.3rem;
     }
 }

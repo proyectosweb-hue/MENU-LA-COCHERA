@@ -7,9 +7,14 @@ async function loadMenu() {
         renderMenu(data);
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('menuContainer').innerHTML =
-            '<p style="color: red;">Error al cargar el menú. Por favor, asegúrate que existe data.json</p>';
+        document.getElementById('menuGrid').innerHTML =
+            '<p style="color:#7a1f1f;text-align:center;">No se pudo cargar el menú (data.json).</p>';
     }
+}
+
+// Formatear precio en pesos dominicanos
+function formatPrice(value) {
+    return 'RD$ ' + value.toLocaleString('es-DO');
 }
 
 // Renderizar el menú
@@ -21,26 +26,31 @@ function renderMenu(menuData) {
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'category';
 
-        const categoryTitle = document.createElement('h2');
-        categoryTitle.className = 'category-title';
-        categoryTitle.textContent = category.nombre;
-
-        categoryDiv.appendChild(categoryTitle);
+        const title = document.createElement('h2');
+        title.className = 'category-title';
+        const titleSpan = document.createElement('span');
+        titleSpan.textContent = category.nombre;
+        title.appendChild(titleSpan);
+        categoryDiv.appendChild(title);
 
         category.platos.forEach(dish => {
             const dishDiv = document.createElement('div');
             dishDiv.className = 'dish';
 
-            const nameSpan = document.createElement('span');
-            nameSpan.className = 'dish-name';
-            nameSpan.textContent = dish.nombre;
+            const name = document.createElement('span');
+            name.className = 'dish-name';
+            name.textContent = dish.nombre;
 
-            const priceSpan = document.createElement('span');
-            priceSpan.className = 'dish-price';
-            priceSpan.textContent = `RD$ ${dish.precio.toLocaleString('es-DO')}`;
+            const leader = document.createElement('span');
+            leader.className = 'dish-leader';
 
-            dishDiv.appendChild(nameSpan);
-            dishDiv.appendChild(priceSpan);
+            const price = document.createElement('span');
+            price.className = 'dish-price';
+            price.textContent = formatPrice(dish.precio);
+
+            dishDiv.appendChild(name);
+            dishDiv.appendChild(leader);
+            dishDiv.appendChild(price);
             categoryDiv.appendChild(dishDiv);
         });
 
@@ -48,10 +58,9 @@ function renderMenu(menuData) {
     });
 }
 
-// Descargar como PDF (usa la función print del navegador)
+// Descargar / imprimir
 document.getElementById('downloadBtn').addEventListener('click', function() {
     window.print();
 });
 
-// Cargar menú al abrir la página
 document.addEventListener('DOMContentLoaded', loadMenu);
