@@ -1,65 +1,48 @@
-// Cargar datos del menú
 async function loadMenu() {
     try {
         const response = await fetch('data.json');
-        if (!response.ok) throw new Error('Error al cargar el menú');
-        const data = await response.json();
-        renderMenu(data);
+        const menu = await response.json();
+        renderMenu(menu);
     } catch (error) {
-        console.error('Error:', error);
-        document.getElementById('menuGrid').innerHTML =
-            '<p style="color:#7a1f1f;text-align:center;">No se pudo cargar el menú (data.json).</p>';
+        document.getElementById('content').innerHTML = '<p>Error al cargar menú</p>';
     }
 }
 
-// Formatear precio en pesos dominicanos
-function formatPrice(value) {
-    return 'RD$ ' + value.toLocaleString('es-DO');
-}
+function renderMenu(menu) {
+    const content = document.getElementById('content');
+    content.innerHTML = '';
 
-// Renderizar el menú
-function renderMenu(menuData) {
-    const container = document.getElementById('menuGrid');
-    container.innerHTML = '';
+    menu.forEach(category => {
+        const section = document.createElement('div');
+        section.className = 'section';
 
-    menuData.forEach(category => {
-        const categoryDiv = document.createElement('div');
-        categoryDiv.className = 'category';
-
-        const title = document.createElement('h2');
-        title.className = 'category-title';
-        const titleSpan = document.createElement('span');
-        titleSpan.textContent = category.nombre;
-        title.appendChild(titleSpan);
-        categoryDiv.appendChild(title);
+        const title = document.createElement('div');
+        title.className = 'section-title';
+        title.textContent = category.nombre;
+        section.appendChild(title);
 
         category.platos.forEach(dish => {
-            const dishDiv = document.createElement('div');
-            dishDiv.className = 'dish';
+            const item = document.createElement('div');
+            item.className = 'item';
 
-            const name = document.createElement('span');
-            name.className = 'dish-name';
+            const name = document.createElement('div');
+            name.className = 'item-name';
             name.textContent = dish.nombre;
 
-            const leader = document.createElement('span');
-            leader.className = 'dish-leader';
+            const price = document.createElement('div');
+            price.className = 'item-price';
+            price.textContent = 'RD$ ' + dish.precio.toLocaleString();
 
-            const price = document.createElement('span');
-            price.className = 'dish-price';
-            price.textContent = formatPrice(dish.precio);
-
-            dishDiv.appendChild(name);
-            dishDiv.appendChild(leader);
-            dishDiv.appendChild(price);
-            categoryDiv.appendChild(dishDiv);
+            item.appendChild(name);
+            item.appendChild(price);
+            section.appendChild(item);
         });
 
-        container.appendChild(categoryDiv);
+        content.appendChild(section);
     });
 }
 
-// Descargar / imprimir
-document.getElementById('downloadBtn').addEventListener('click', function() {
+document.getElementById('downloadBtn').addEventListener('click', () => {
     window.print();
 });
 
