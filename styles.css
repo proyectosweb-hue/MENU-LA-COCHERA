@@ -5,29 +5,23 @@
 }
 
 :root {
-    --bg: #14110d;
-    --bg2: #1d1813;
-    --cream: #f2e7cf;
-    --cream-dim: #cdbf9f;
-    --gold: #d9a93a;
-    --gold-soft: #e8c66a;
-    /* Listones caribeños */
-    --c-red: #d8362f;
-    --c-orange: #e8772b;
-    --c-yellow: #ecc233;
-    --c-green: #3f9b54;
-    --c-teal: #1f8a8a;
-    --c-blue: #1f4e87;
-    --c-magenta: #cc2e74;
+    --dark: #1a1410;
+    --cream: #f5f1ed;
+    --accent: #c84c2a;
+    --accent-light: #e8936e;
+    --text: #2d2520;
+    --border: #e0d5c8;
 }
 
 html { font-size: 16px; }
 
 body {
-    font-family: 'Crimson Text', serif;
-    background: #0a0a0a;
-    padding: 22px 12px;
-    line-height: 1.45;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background: #fafaf8;
+    padding: 20px 12px;
+    line-height: 1.5;
 }
 
 .print-header {
@@ -36,165 +30,101 @@ body {
 }
 
 #downloadBtn {
-    background: var(--c-red);
-    color: var(--cream);
-    border: 2px solid var(--gold-soft);
-    padding: 12px 30px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.85rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
     cursor: pointer;
-    transition: all 0.2s;
+    border-radius: 3px;
+    transition: background 0.2s;
 }
 
-#downloadBtn:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+#downloadBtn:hover { background: #a63d1f; }
 
-/* ===== MARCO DE LISTONES DE COLORES ===== */
+/* ===== FRAME ===== */
 .frame {
     width: 210mm;
     max-width: 100%;
     margin: 0 auto;
-    padding: 9mm;
-    background:
-        repeating-linear-gradient(
-            135deg,
-            var(--c-red)     0,   var(--c-red)     14mm,
-            var(--c-orange)  14mm, var(--c-orange)  28mm,
-            var(--c-yellow)  28mm, var(--c-yellow)  42mm,
-            var(--c-green)   42mm, var(--c-green)   56mm,
-            var(--c-teal)    56mm, var(--c-teal)    70mm,
-            var(--c-blue)    70mm, var(--c-blue)    84mm,
-            var(--c-magenta) 84mm, var(--c-magenta) 98mm
-        );
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7);
-    position: relative;
+    background: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-/* sombreado tipo tablón sobre los colores */
-.frame::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        135deg,
-        rgba(0,0,0,0.28) 0, rgba(0,0,0,0) 3mm,
-        rgba(255,255,255,0.10) 7mm, rgba(0,0,0,0.28) 14mm
-    );
-    pointer-events: none;
-}
-
-/* ===== PANEL OSCURO INTERIOR ===== */
+/* ===== MENU PANEL ===== */
 .menu {
-    position: relative;
-    background-color: var(--bg);
-    background-image:
-        radial-gradient(circle at 50% -10%, rgba(217,169,58,0.10) 0%, transparent 45%),
-        radial-gradient(circle at 0% 100%, rgba(31,138,138,0.08) 0%, transparent 40%),
-        radial-gradient(circle at 100% 100%, rgba(204,46,116,0.08) 0%, transparent 40%);
-    border: 2px solid var(--gold);
-    outline: 1px solid rgba(242,231,207,0.5);
-    outline-offset: 3px;
-    padding: 12mm 12mm 8mm;
-    color: var(--cream);
+    background: white;
+    padding: 14mm;
+    color: var(--text);
 }
 
-/* ===== ENCABEZADO ===== */
+/* ===== HEADER ===== */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8mm;
     text-align: center;
+    margin-bottom: 8mm;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8mm;
 }
 
 .flourish {
-    font-size: 2.4rem;
-    color: var(--gold);
-    opacity: 0.8;
-    flex-shrink: 0;
+    display: none;
 }
 
-.header-center { flex: 0 1 auto; }
+.header-center { }
 
 .logo {
     display: none;
-    width: 44mm;
+    width: 50mm;
     height: auto;
-    margin: 0 auto 2mm;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+    margin: 0 auto 4mm;
 }
 .logo.logo-ok { display: block; }
 
 .text-logo h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 900;
-    color: var(--cream);
-    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 3px;
+    margin-bottom: 2mm;
 }
 
 .estd {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.62rem;
-    letter-spacing: 4px;
-    color: var(--gold-soft);
-    margin-top: 1mm;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 3mm;
+    font-weight: 600;
 }
 
 .tagline {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    letter-spacing: 5px;
-    color: var(--cream);
-    margin-top: 2mm;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text);
 }
 
-/* ===== Doble línea ornamental ===== */
-.rule-double {
-    height: 0;
-    border-top: 2px solid var(--gold);
-    border-bottom: 1px solid var(--gold);
-    padding-bottom: 2px;
-    margin: 6mm 0 7mm;
-    position: relative;
-}
-.rule-double::after {
-    content: '◆';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    background: var(--bg);
-    color: var(--gold);
-    font-size: 0.8rem;
-    padding: 0 8px;
-}
-
-/* ===== CONTENIDO 2 COLUMNAS MULTIPÁGINA ===== */
+/* ===== CONTENT ===== */
 .content {
     columns: 2;
-    column-gap: 11mm;
+    column-gap: 10mm;
 }
 
-/* Banner de grupo (COMIDA / BEBIDAS) */
+/* Group banner (COMIDA / BEBIDAS) */
 .group-banner {
     column-span: all;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 8px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--bg);
-    background: linear-gradient(var(--gold-soft), var(--gold));
-    padding: 3mm 0;
-    margin: 4mm 0 7mm;
-    border-top: 2px solid var(--cream);
-    border-bottom: 2px solid var(--cream);
-    box-shadow: inset 0 0 0 1px rgba(20,17,13,0.3);
+    color: white;
+    background: var(--accent);
+    padding: 4mm 0;
+    margin: 6mm 0 6mm;
+    page-break-before: auto;
 }
 
 .section {
@@ -202,86 +132,79 @@ body {
     margin-bottom: 6mm;
 }
 
-/* Título de categoría estilo masthead vintage */
+/* Section title */
 .section-title {
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--gold-soft);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 3.5mm;
-    position: relative;
+    letter-spacing: 2px;
+    margin-bottom: 3mm;
+    padding-bottom: 2mm;
+    border-bottom: 1px solid var(--border);
 }
 .section-title span {
-    background: var(--bg);
-    padding: 0 8px;
-    position: relative;
-    z-index: 1;
+    background: white;
+    padding: 0;
 }
 .section-title::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0; right: 0;
-    height: 1px;
-    background: rgba(217,169,58,0.45);
+    display: none;
 }
 
 .item {
     display: flex;
     align-items: baseline;
-    gap: 4px;
-    margin-bottom: 2.6mm;
+    gap: 3px;
+    margin-bottom: 2.2mm;
+    font-size: 0.9rem;
 }
 
 .item-name {
-    font-family: 'Crimson Text', serif;
-    font-size: 0.95rem;
     font-weight: 600;
-    color: var(--cream);
-    letter-spacing: 0.3px;
+    color: var(--dark);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex: 0 1 auto;
 }
 
 .item-dots {
     flex: 1;
-    border-bottom: 1px dotted rgba(205,191,159,0.45);
-    margin: 0 2px 4px;
-    min-width: 10px;
+    border-bottom: 1px dotted var(--border);
+    margin: 0 2px 3px;
+    min-width: 8px;
 }
 
 .item-price {
-    font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    font-size: 0.82rem;
-    color: var(--gold-soft);
+    color: var(--accent);
     white-space: nowrap;
+    flex: 0 0 auto;
 }
 
-/* ===== PIE ===== */
+/* ===== FOOTER ===== */
 .footer {
     text-align: center;
-    margin-top: 4mm;
+    margin-top: 6mm;
+    padding-top: 6mm;
+    border-top: 2px solid var(--accent);
 }
 .footer p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.66rem;
-    letter-spacing: 2px;
-    color: var(--cream-dim);
-    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    color: #666;
+    margin: 1mm 0;
 }
 .footer-sub {
-    color: var(--gold-soft) !important;
+    color: var(--accent);
     margin-top: 2mm;
+    font-weight: 600;
 }
 
-/* ===== IMPRESIÓN MULTIPÁGINA ===== */
+/* ===== PRINT MULTI-PAGE ===== */
 @media print {
-    body { background: #fff; padding: 0; }
+    body { background: white; padding: 0; }
     .print-header { display: none; }
 
     .frame {
@@ -303,14 +226,13 @@ body {
     @page { size: A4; margin: 0; }
 }
 
-/* ===== MÓVIL ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-    body { padding: 10px 5px; }
-    .frame { width: 100%; padding: 6mm; }
-    .menu { padding: 9mm 7mm; }
-    .header { gap: 3mm; }
-    .flourish { font-size: 1.5rem; }
-    .logo { width: 36mm; }
+    body { padding: 10px 6px; }
+    .frame { width: 100%; }
+    .menu { padding: 12mm 10mm; }
+    .text-logo h1 { font-size: 1.8rem; }
+    .logo { width: 40mm; }
     .content { columns: 1; }
-    .group-banner { font-size: 1.2rem; letter-spacing: 5px; }
+    .group-banner { font-size: 1.1rem; }
 }
